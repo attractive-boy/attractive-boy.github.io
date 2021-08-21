@@ -187,7 +187,7 @@ backup:
 
 algolia:
   applicationID: '53D19Y7XVE'
-  apiKey: 'aeaf47c9cab216352ab273057571497f'
+  apiKey: '4cf3813afab1cda9a5d89eadf450864b'
   indexName: 'IDGI'
 
 aomori_search_algolia: true
