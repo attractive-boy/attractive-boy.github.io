@@ -1,0 +1,36 @@
+<%- partial('_partial/head') %>
+<link rel="icon" href="/ico/PacMan.ico">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+<script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+<body>
+
+    <%- partial('_partial/header') %>
+
+    <div class="container">
+        <div class="main">
+            <section class="inner">
+                <section class="inner-main">
+                    <%- body %>
+                </section>
+            </section>
+
+            <% if (page.sidebar !== false){ %>
+            <aside class="sidebar <% if (config.aomori_search_algolia){ %>sidebar-search-fix<% } %>">
+                <%- partial('_partial/sidebar') %>
+            </aside>
+            <% } %>
+        </div>
+    </div>
+
+    <%- partial('_partial/footer') %>
+<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+<script type="text/javascript" src="/javascripts/fireworks.js"></script>
+<!--ä¯ÀÀÆ÷¸ãÐ¦±êÌâ-->
+<script type="text/javascript" src="/javascripts/FunnyTitle.js"></script>
+<!--¶¯Ì¬ÏßÌõ±³¾°-->
+<script type="text/javascript"
+color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+</body>
+</html>

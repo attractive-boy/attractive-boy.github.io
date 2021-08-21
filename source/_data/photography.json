@@ -1,0 +1,12 @@
+[
+    {
+        "photo": "https://index.attractiveboy.top/picture/banner/banner1.JPG",
+        "title": "我的自拍",
+        "icon": {
+            "name": "unsplash",
+            "type": "logo",
+            "url": "https://attractiveboy.top"
+        },
+        "place": "China"
+    }
+]

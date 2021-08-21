@@ -1,0 +1,10 @@
+version: 1628496545463
+language: cn
+aomori_widgets:
+  - toc
+  - category
+  - tag
+  - recent_posts
+  - archive
+
+rss: /atom.xml
