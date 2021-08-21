@@ -188,7 +188,6 @@ backup:
 algolia:
   applicationID: '53D19Y7XVE'
   apiKey: '4cf3813afab1cda9a5d89eadf450864b'
-  adminApiKey: 'ef9ac53b1dc397c7d3b25d82cae76c9c'
   indexName: 'IDGI'
   chunkSize: 5000
 
