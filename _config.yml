@@ -127,7 +127,7 @@ aomori_widgets:
   - archive #文章归档
 
 # 知识共享使用许可
-#aomori_copyright: true # or false
+aomori_copyright: true # or false
 
 # 社交媒体
 aomori_social:
@@ -160,11 +160,21 @@ aomori_busuanzi: true
 # Emoji Favicon
 ##aomori_favicon: 🎮 
 
-# Valine
-aomori_valine:
+# comment
+#aomori_valine:
+  #enable: true
+  #appId: 'QveONKJXoGOXEGdNb3e0iJpU-MdYXbMMI'
+  #appKey: 'GojSrg0lF1RWya5pBJ4qBozc'
+
+aomori_gitalk:
   enable: true
-  appId: 'QveONKJXoGOXEGdNb3e0iJpU-MdYXbMMI'
-  appKey: 'GojSrg0lF1RWya5pBJ4qBozc'
+  clientID: 97ff5e0e940c54e6f525
+  clientSecret: a8f7deaf784f0c416c47295984a8081ba9cce048
+  repo: IDGI-gitalk
+  owner: attractive-boy
+  admin: 
+    - attractive-boy
+  distractionFreeMode: true // Facebook-like distraction free mode
 
 # Extensions
 ## Plugins: http://hexo.io/plugins/
@@ -191,3 +201,5 @@ algolia:
   indexName: 'IDGI'
 
 aomori_search_algolia: true
+
+rss: /atom.xml
