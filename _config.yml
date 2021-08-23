@@ -165,6 +165,7 @@ aomori_valine:
   enable: true
   appId: 'QveONKJXoGOXEGdNb3e0iJpU-MdYXbMMI'
   appKey: 'GojSrg0lF1RWya5pBJ4qBozc'
+  
 
 # aomori_gitalk:
 #   enable: true
