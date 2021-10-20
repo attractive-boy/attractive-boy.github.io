@@ -28,7 +28,7 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+skip_render: music/**
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -155,7 +155,7 @@ aomori_baidu_sitepush: true
 # id: XXX
 
 # 不蒜子 统计
-aomori_busuanzi: true
+# aomori_busuanzi: true
 
 # Emoji Favicon
 # aomori_favicon: 🎮 

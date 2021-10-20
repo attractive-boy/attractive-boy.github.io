@@ -52,7 +52,6 @@
                 👁有 <span id="busuanzi_value_page_pv">N</span> 人看过
             </div>
             <% } %>
-
         </div>
 
         <div class="article-entry post-inner-html hairline" itemprop="articleBody">
@@ -74,7 +73,7 @@
     <%- partial('post/nav') %>
 
     <section class="share">
-        <div class="share-title"><%= __('share') %></div>
+        <!-- <div class="share-title"><%= __('share') %></div> -->
         <a class="share-item" target="_blank"
             href="https://twitter.com/share?text=<%- post.title %> - <%- config.title %>&url=<%- post.permalink %>">
             <box-icon type='logo' name='twitter'></box-icon>
@@ -87,6 +86,10 @@
             href="https://service.weibo.com/share/share.php?title=<%- post.title %> - <%- config.title %>&url=<%- post.permalink %>&pic=">
             <div class="n-icon n-icon-weibo"></div>
         </a> -->
+        <a class="share-item" target="_blank"
+            href="/music">
+            <box-icon type='solid' name='music'></box-icon>
+        </a>
     </section>
 
 </article>
