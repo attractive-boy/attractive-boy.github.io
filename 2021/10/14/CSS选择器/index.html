@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    
+    <title>CSS高级选择器 | IDGI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    
+
+    
+        <meta property="algolia:search" data-application-id="53D19Y7XVE" data-api-key="4cf3813afab1cda9a5d89eadf450864b" data-index-name="IDGI">
+    
+
+    
+    <link rel="alternate" href="/atom.xml" title="IDGI" type="application/atom+xml">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+<link rel="stylesheet" href="/dist/build.css?v=1628496545463.css">
+
+
+    <script>
+        window.isPost = true
+        window.aomori = {
+            
+            
+            valine: {
+                enable: true,
+                appId: "QveONKJXoGOXEGdNb3e0iJpU-MdYXbMMI",
+                appKey: "GojSrg0lF1RWya5pBJ4qBozc",
+            },
+            
+            
+        }
+        window.aomori_logo_typed_animated = true
+        window.aomori_search_algolia = true
+
+    </script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<link rel="icon" href="/ico/PacMan.ico">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+<script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+<body>
+
+    <div class="container">
+    <header class="header">
+        <div class="header-type">
+            
+            <div class="header-type-avatar avatar avatar-sm">
+                <img src="/ico/Mario.ico" alt="attractiveboy">
+            </div>
+            
+            <div class="header-type-inner">
+                
+                    <div id="typed-strings" style="display:none">
+                        <p>IDGI</p>
+                    </div>
+                    <a class="header-type-title" id="typed" href="/"></a>
+                
+    
+                
+            </div>
+        </div>
+        <div class="header-menu">
+            <div class="header-menu-inner">
+                
+                <a href="/">Home</a>
+                
+                <a href="/archives">Archives</a>
+                
+                <a href="/friends">Friends</a>
+                
+                <a href="/photography">Photography</a>
+                
+            </div>
+            <div class="header-menu-social">
+                
+    <a class="social" target="_blank" href="https://github.com/attractive-boy">
+        <box-icon type='logo' name='github'></box-icon>
+    </a>
+
+    <a class="social" target="_blank" href="">
+        <box-icon type='' name=''></box-icon>
+    </a>
+
+            </div>
+        </div>
+
+        <div class="header-menu-mobile">
+            <div class="header-menu-mobile-inner" id="mobile-menu-open">
+                <i class="icon icon-menu"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="header-menu-mobile-menu">
+        <div class="header-menu-mobile-menu-bg"></div>
+        <div class="header-menu-mobile-menu-wrap">
+            <div class="header-menu-mobile-menu-inner">
+                <div class="header-menu-mobile-menu-close" id="mobile-menu-close">
+                    <i class="icon icon-cross"></i>
+                </div>
+                <div class="header-menu-mobile-menu-list">
+                    
+                    <a href="/">Home</a>
+                    
+                    <a href="/archives">Archives</a>
+                    
+                    <a href="/friends">Friends</a>
+                    
+                    <a href="/photography">Photography</a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+    <div class="container">
+        <div class="main">
+            <section class="inner">
+                <section class="inner-main">
+                    <div class="post">
+    <article id="post-ckztozqyv0001w84i9irx2njx" class="article article-type-post" itemscope
+    itemprop="blogPost">
+
+    <div class="article-inner">
+
+        
+          
+        
+        
+        
+
+        
+        <header class="article-header">
+            
+  
+    <h1 class="article-title" itemprop="name">
+      CSS高级选择器
+    </h1>
+  
+
+        </header>
+        
+
+        <div class="article-more-info article-more-info-post hairline">
+
+            <div class="article-date">
+  <time datetime="2021-10-14T02:50:24.000Z" itemprop="datePublished">2021-10-14</time>
+</div>
+
+            
+
+            
+            <div class="article-tag">
+                <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
+            </div>
+            
+
+            
+        </div>
+
+        <div class="article-entry post-inner-html hairline" itemprop="articleBody">
+            <h2 id="一、伪类选择器"><a href="#一、伪类选择器" class="headerlink" title="一、伪类选择器"></a>一、伪类选择器</h2><ul>
+<li>对之前的类选择器的补充再定义一个别名。</li>
+</ul>
+<p>举例：</p>
+<pre><code>&lt;div class=&#39;a a-1&#39;&gt;123&lt;/div&gt;
+其中a-1是伪类。
+</code></pre>
+<p>选择这个标签的时候可以用.a或.a-1或.a .a-1。</p>
+<span id="more"></span>
+
+<p>常用的两个伪类选择器</p>
+<ul>
+<li>类名：nth-child(N)</li>
+</ul>
+<p>这种选择器是查找父元素下的第N个元素，判断是不是<code>该类名</code>,是则采用该样式，否的话该语句不起作用。</p>
+<ul>
+<li>类名：nth-of-type(N)</li>
+</ul>
+<p>这种选择器是查找父元素下所有是<code>该类名</code>的元素，选择第N个并采用该样式。</p>
+<p>尝试下列代码：</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt; 
+p:nth-child(2)
+&#123;
+background:#00ff00;
+&#125;
+p:nth-of-type(2)
+&#123;
+background:#ff0000;
+&#125;
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;这是标题&lt;/h1&gt;
+&lt;p&gt;第一个段落。&lt;/p&gt;
+&lt;p&gt;第二个段落。&lt;/p&gt;
+&lt;p&gt;第三个段落。&lt;/p&gt;
+&lt;p&gt;第四个段落。&lt;/p&gt;
+&lt;p&gt;第五个段落。&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>效果是第一个段落变成绿色，第二个段落变成红色。</p>
+<h2 id="二、后代（子代）选择器"><a href="#二、后代（子代）选择器" class="headerlink" title="二、后代（子代）选择器"></a>二、后代（子代）选择器</h2><ul>
+<li>后代选择器 类名1 类名2</li>
+</ul>
+<p>类名1下的所有类名2采用该样式。</p>
+<ul>
+<li>子代选择器 类名1&gt;类名2</li>
+</ul>
+<p>类名1下的直接连接着的类名2采用该样式</p>
+<p>尝试下列代码：</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+div&gt;p
+&#123;
+background-color:yellow;
+&#125;
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;h1&gt;欢迎来到我到的主页&lt;/h1&gt;
+
+&lt;div&gt;
+&lt;p&gt;我是唐老鸭。&lt;/p&gt;
+&lt;p&gt;我住在 Duckburg。&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;我最好的朋友是米老鼠。&lt;/p&gt;
+
+&lt;div&gt;
+&lt;span&gt;&lt;p&gt;我的样式不会改变。&lt;/p&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>这样的嵌套在其他标签的p标签不会变成黄色，如果将<code>div&gt;p</code>改写成<code>div p</code>则所有的p标签变成黄色。</p>
+<h2 id="三、兄弟（相邻）选择器"><a href="#三、兄弟（相邻）选择器" class="headerlink" title="三、兄弟（相邻）选择器"></a>三、兄弟（相邻）选择器</h2><ul>
+<li>兄弟选择器 类名~类名</li>
+</ul>
+<p>他是找到前者后他会一直找到所有的后者并采用该样式</p>
+<ul>
+<li>相邻选择器 类名+类名</li>
+</ul>
+<p>他是找到前者后只有紧挨着前者的第一个后者采用该样式</p>
+<h2 id="四、属性选择器"><a href="#四、属性选择器" class="headerlink" title="四、属性选择器"></a>四、属性选择器</h2><ul>
+<li>属性选择器优先级同类</li>
+<li>[属性名]查找所有有该属性的标签</li>
+<li>[属性名=属性值]精确查找</li>
+<li>[属性名^=值]以某某值开头</li>
+<li>[属性名$=值]以某某值结尾</li>
+<li>[属性名*=值]包含某某值(模糊查询)</li>
+</ul>
+
+        </div>
+
+    </div>
+
+    
+
+    
+
+    
+
+    
+<div class="article-copyright hairline">
+  <p>
+    本作品采用 <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a> 进行许可。
+  </p>
+</div>
+
+
+    
+
+    
+<nav class="article-nav">
+  
+    <a href="/2021/10/20/bilibili%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/" id="article-nav-newer" class="article-nav-link-wrap">
+      <div class="article-nav-caption">下一篇</div>
+      <div class="article-nav-title">
+        
+          bilibili视频下载
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/08/21/%E8%BD%AE%E6%92%AD%E5%9B%BE/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-caption">上一篇</div>
+      <div class="article-nav-title">焦点轮播图</div>
+    </a>
+  
+</nav>
+
+
+    <section class="share">
+        <!-- <div class="share-title">分享</div> -->
+        <a class="share-item" target="_blank"
+            href="https://twitter.com/share?text=CSS高级选择器 - IDGI&url=http://attractiveboy.top/2021/10/14/CSS%E9%80%89%E6%8B%A9%E5%99%A8/">
+            <box-icon type='logo' name='twitter'></box-icon>
+        </a>
+        <a class="share-item" target="_blank"
+            href="https://www.facebook.com/sharer.php?title=CSS高级选择器 - IDGI&u=http://attractiveboy.top/2021/10/14/CSS%E9%80%89%E6%8B%A9%E5%99%A8/">
+            <box-icon name='facebook-square' type='logo' ></box-icon>
+        </a>
+        <!-- <a class="share-item" target="_blank"
+            href="https://service.weibo.com/share/share.php?title=CSS高级选择器 - IDGI&url=http://attractiveboy.top/2021/10/14/CSS%E9%80%89%E6%8B%A9%E5%99%A8/&pic=">
+            <div class="n-icon n-icon-weibo"></div>
+        </a> -->
+        <a class="share-item" target="_blank"
+            href="/music">
+            <box-icon type='solid' name='music'></box-icon>
+        </a>
+    </section>
+
+</article>
+
+
+
+
+
+
+
+
+<section class="comments">
+    <div id="valine-container"></div>
+</section>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+
+
+
+
+</div>
+                </section>
+            </section>
+
+            
+            <aside class="sidebar sidebar-search-fix">
+                
+
+    <div class="search">
+    <div class="has-icon-right">
+        <input type="text" class="form-input" id="search" placeholder="SEARCH" autocomplete="off">
+        <div class="form-icon">
+            <box-icon name='search' color="#3c4859"></box-icon>
+        </div>
+    </div>
+    <div class="search-result" id="search-ps"></div>
+</div>
+
+
+<div class="widget" id="widget">
+    
+      
+  <div class="widget-wrap">
+    <div class="widget-inner">
+      <div class="toc post-toc-html"></div>
+    </div>
+  </div>
+
+    
+      
+
+    
+      
+  <div class="widget-wrap widget-tags">
+    <div class="widget-title"><span>Tags</span></div>
+    <div class="widget-inner">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DOM/" rel="tag">DOM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/" rel="tag">jQuery</a></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap widget-recent-posts">
+    <div class="widget-title"><span>Recent Posts</span></div>
+    <div class="widget-inner">
+      <ul>
+        
+          <li>
+            <a href="/2021/10/20/bilibili%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/">bilibili视频下载</a>
+          </li>
+        
+          <li>
+            <a href="/2021/10/14/CSS%E9%80%89%E6%8B%A9%E5%99%A8/">CSS高级选择器</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/21/%E8%BD%AE%E6%92%AD%E5%9B%BE/">焦点轮播图</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget-wrap widget-archive">
+    <div class="widget-title"><span>Archive</span></div>
+    <div class="widget-inner">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a></li></ul>
+    </div>
+  </div>
+
+
+    
+</div>
+
+<div id="backtop"><i class="icon icon-arrow-up"></i></div>
+            </aside>
+            
+        </div>
+    </div>
+
+    <footer class="footer">
+    <div class="footer-wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#3c4859" fill-opacity="1"
+                d="M0,160L60,181.3C120,203,240,245,360,240C480,235,600,181,720,186.7C840,192,960,256,1080,261.3C1200,267,1320,213,1380,186.7L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
+            </path>
+        </svg>
+    </div>
+
+    <div class="footer-wrap">
+        <div class="footer-inner">
+            IDGI &copy;2022
+            <!-- <br> Powered By Hexo · Theme By 
+            <a href="https://github.com/lh1me/hexo-theme-aomori" target="_blank">Aomori</a> -->
+        </div>
+    </div>
+
+</footer>
+
+
+
+
+
+
+<script src="/dist/build.js?1628496545463.js"></script>
+
+
+<script src="/dist/custom.js?1628496545463.js"></script>
+
+
+
+<!-- 百度链接提交 -->
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+
+
+
+
+<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+<script type="text/javascript" src="/javascripts/fireworks.js"></script>
+<!--�������Ц����-->
+<script type="text/javascript" src="/javascripts/FunnyTitle.js"></script>
+<!--��̬��������-->
+<script type="text/javascript"
+color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+</body>
+</html>
