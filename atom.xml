@@ -40,32 +40,6 @@
   </entry>
   
   <entry>
-    <title>CSS高级选择器</title>
-    <link href="http://attractiveboy.top/2021/10/14/CSS%E9%80%89%E6%8B%A9%E5%99%A8/"/>
-    <id>http://attractiveboy.top/2021/10/14/CSS%E9%80%89%E6%8B%A9%E5%99%A8/</id>
-    <published>2021-10-14T02:50:24.000Z</published>
-    <updated>2021-10-20T10:00:03.520Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="一、伪类选择器"><a href="#一、伪类选择器" class="headerlink" title="一、伪类选择器"></a>一、伪类选择器</h2><ul><li>对之前的类选择器的补充再定义一个别名。</li></ul><p>举例：</p><pre><code>&lt;div class=&#39;a a-1&#39;&gt;123&lt;/div&gt;其中a-1是伪类。</code></pre><p>选择这个标签的时候可以用.a或.a-1或.a .a-1。</p><span id="more"></span><p>常用的两个伪类选择器</p><ul><li>类名：nth-child(N)</li></ul><p>这种选择器是查找父元素下的第N个元素，判断是不是<code>该类名</code>,是则采用该样式，否的话该语句不起作用。</p><ul><li>类名：nth-of-type(N)</li></ul><p>这种选择器是查找父元素下所有是<code>该类名</code>的元素，选择第N个并采用该样式。</p><p>尝试下列代码：</p><pre><code>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;style&gt; p:nth-child(2)&#123;background:#00ff00;&#125;p:nth-of-type(2)&#123;background:#ff0000;&#125;&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;这是标题&lt;/h1&gt;&lt;p&gt;第一个段落。&lt;/p&gt;&lt;p&gt;第二个段落。&lt;/p&gt;&lt;p&gt;第三个段落。&lt;/p&gt;&lt;p&gt;第四个段落。&lt;/p&gt;&lt;p&gt;第五个段落。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</code></pre><p>效果是第一个段落变成绿色，第二个段落变成红色。</p><h2 id="二、后代（子代）选择器"><a href="#二、后代（子代）选择器" class="headerlink" title="二、后代（子代）选择器"></a>二、后代（子代）选择器</h2><ul><li>后代选择器 类名1 类名2</li></ul><p>类名1下的所有类名2采用该样式。</p><ul><li>子代选择器 类名1&gt;类名2</li></ul><p>类名1下的直接连接着的类名2采用该样式</p><p>尝试下列代码：</p><pre><code>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;style&gt;div&gt;p&#123;background-color:yellow;&#125;&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;欢迎来到我到的主页&lt;/h1&gt;&lt;div&gt;&lt;p&gt;我是唐老鸭。&lt;/p&gt;&lt;p&gt;我住在 Duckburg。&lt;/p&gt;&lt;/div&gt;&lt;p&gt;我最好的朋友是米老鼠。&lt;/p&gt;&lt;div&gt;&lt;span&gt;&lt;p&gt;我的样式不会改变。&lt;/p&gt;&lt;/span&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</code></pre><p>这样的嵌套在其他标签的p标签不会变成黄色，如果将<code>div&gt;p</code>改写成<code>div p</code>则所有的p标签变成黄色。</p><h2 id="三、兄弟（相邻）选择器"><a href="#三、兄弟（相邻）选择器" class="headerlink" title="三、兄弟（相邻）选择器"></a>三、兄弟（相邻）选择器</h2><ul><li>兄弟选择器 类名~类名</li></ul><p>他是找到前者后他会一直找到所有的后者并采用该样式</p><ul><li>相邻选择器 类名+类名</li></ul><p>他是找到前者后只有紧挨着前者的第一个后者采用该样式</p><h2 id="四、属性选择器"><a href="#四、属性选择器" class="headerlink" title="四、属性选择器"></a>四、属性选择器</h2><ul><li>属性选择器优先级同类</li><li>[属性名]查找所有有该属性的标签</li><li>[属性名=属性值]精确查找</li><li>[属性名^=值]以某某值开头</li><li>[属性名$=值]以某某值结尾</li><li>[属性名*=值]包含某某值(模糊查询)</li></ul>]]></content>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;一、伪类选择器&quot;&gt;&lt;a href=&quot;#一、伪类选择器&quot; class=&quot;headerlink&quot; title=&quot;一、伪类选择器&quot;&gt;&lt;/a&gt;一、伪类选择器&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;对之前的类选择器的补充再定义一个别名。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;举例：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&amp;#39;a a-1&amp;#39;&amp;gt;123&amp;lt;/div&amp;gt;
-其中a-1是伪类。
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;选择这个标签的时候可以用.a或.a-1或.a .a-1。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="CSS" scheme="http://attractiveboy.top/tags/CSS/"/>
-    
-  </entry>
-  
-  <entry>
     <title>焦点轮播图</title>
     <link href="http://attractiveboy.top/2021/08/21/%E8%BD%AE%E6%92%AD%E5%9B%BE/"/>
     <id>http://attractiveboy.top/2021/08/21/%E8%BD%AE%E6%92%AD%E5%9B%BE/</id>
@@ -84,9 +58,9 @@
     
     <category term="CSS" scheme="http://attractiveboy.top/tags/CSS/"/>
     
-    <category term="jQuery" scheme="http://attractiveboy.top/tags/jQuery/"/>
-    
     <category term="HTML" scheme="http://attractiveboy.top/tags/HTML/"/>
+    
+    <category term="jQuery" scheme="http://attractiveboy.top/tags/jQuery/"/>
     
   </entry>
   
