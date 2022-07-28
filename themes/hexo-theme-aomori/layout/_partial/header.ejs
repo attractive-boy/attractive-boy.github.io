@@ -24,7 +24,11 @@
         <div class="header-menu">
             <div class="header-menu-inner">
                 <% for (var i in config.aomori_menu){ %>
-                <a href="<%- url_for(config.aomori_menu[i]) %>"><%= i %></a>
+                    <% if (config.aomori_menu[i] == '/music'){ %>
+                        <!-- <a style="pointer-events: none;" onclick="showMusic()"><%= i %></a> -->
+                    <% } else { %>
+                    <a href="<%- url_for(config.aomori_menu[i]) %>"><%= i %></a>
+                    <% } %>
                 <% } %>
             </div>
             <div class="header-menu-social">
@@ -56,3 +60,19 @@
     </div>
 
 </div>
+
+<div id="iframe" style="width: 375px;height:80%;position:fixed;top:50%;left:5%;transform:translateY(-50%);z-index:100;background:white;visibility:hidden;" >
+    <div style="position:absolute;top:0;right:0;font-size:30px;font-weight:bold;" onclick="closeMusic();">×</div>
+    <iframe frameborder="1" allowtransparency="true" style="width: 100%;height:100%;border:none;" src="/music"></iframe>
+</div>
+
+<script>
+    function showMusic(){
+        var iframe = document.getElementById('iframe');
+        iframe.style.visibility = 'visible';
+    }
+    function closeMusic(){
+        var iframe = document.getElementById('iframe');
+        iframe.style.visibility = 'hidden';
+    }
+</script>

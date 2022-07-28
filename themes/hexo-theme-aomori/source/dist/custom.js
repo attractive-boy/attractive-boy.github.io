@@ -235,7 +235,7 @@ try {
                                 $iconHolder: e.$ui.getElementById("icon"),
                                 type: e.getAttribute("type")
                             }, e
-                        }(t.default = w).define()
+                        } (t.default = w).define()
                     }], r.c = o, r.d = function (e, t, n) {
                         r.o(e, t) || Object.defineProperty(e, t, {
                             enumerable: !0,
@@ -252,9 +252,9 @@ try {
                         if (4 & e && "object" == typeof t && t && t.__esModule) return t;
                         var n = Object.create(null);
                         if (r.r(n), Object.defineProperty(n, "default", {
-                                enumerable: !0,
-                                value: t
-                            }), 2 & e && "string" != typeof t)
+                            enumerable: !0,
+                            value: t
+                        }), 2 & e && "string" != typeof t)
                             for (var o in t) r.d(n, o, function (e) {
                                 return t[e]
                             }.bind(null, o));
@@ -309,7 +309,7 @@ try {
                     n.apply(e, t), r = null
                 }, 80)
             }
-        }(t = n) && t.__esModule && Object.prototype.hasOwnProperty.call(t, "default") && t.default, n.BoxIconElement,
+        } (t = n) && t.__esModule && Object.prototype.hasOwnProperty.call(t, "default") && t.default, n.BoxIconElement,
             function () {
                 document.querySelectorAll(".cases .item").forEach(function (t) {
                     t.addEventListener("mouseover", function (e) {
@@ -335,11 +335,13 @@ try {
                     $("html, body").animate({
                         scrollTop: 0
                     }, 800)
-                }), $(".share > .share-item").hover(function () {
-                    m($(this).children(".n-icon"), $(this).children(".n-icon")[0].classList[1] + "-select")
-                }, function () {
-                    d($(this).children(".n-icon"), $(this).children(".n-icon")[0].classList[2])
-                }), $(".footer-info > .social").hover(function () {
+                }), 
+                // $(".share > .share-item").hover(function () {
+                //     m($(this).children(".n-icon"), $(this).children(".n-icon")[0].classList[1] + "-select")
+                // }, function () {
+                //     d($(this).children(".n-icon"), $(this).children(".n-icon")[0].classList[2])
+                // }),
+                 $(".footer-info > .social").hover(function () {
                     m($(this).children(".n-icon"), $(this).children(".n-icon")[0].classList[1] + "-select")
                 }, function () {
                     d($(this).children(".n-icon"), $(this).children(".n-icon")[0].classList[2])
@@ -352,12 +354,12 @@ try {
                 }));
                 var e = document.querySelector("#widget");
                 if (e && new PerfectScrollbar(e), window.aomori_logo_typed_animated && new Typed("#typed", {
-                        stringsElement: "#typed-strings",
-                        fadeOut: !0,
-                        fadeOutDelay: 800,
-                        typeSpeed: 100,
-                        showCursor: !1
-                    }), window.aomori_search_algolia) {
+                    stringsElement: "#typed-strings",
+                    fadeOut: !0,
+                    fadeOutDelay: 800,
+                    typeSpeed: 100,
+                    showCursor: !1
+                }), window.aomori_search_algolia) {
                     var t = document.querySelector("#search-ps");
                     t && new PerfectScrollbar(t);
                     var r = document.querySelector('meta[property="algolia:search"]').dataset,
@@ -390,16 +392,16 @@ try {
                 });
                 i.slides && i.slides.length <= 1 && i.destroy();
                 var s = {
-                        title: !1,
-                        toolbar: {
-                            zoomIn: !0,
-                            zoomOut: !0,
-                            reset: !0,
-                            prev: !0,
-                            next: !0
-                        },
-                        keyboard: !1
+                    title: !1,
+                    toolbar: {
+                        zoomIn: !0,
+                        zoomOut: !0,
+                        reset: !0,
+                        prev: !0,
+                        next: !0
                     },
+                    keyboard: !1
+                },
                     c = $(".article-gallery");
                 c && 0 < c.length && c.viewer(s);
                 var l = $(".article-entry");
@@ -432,4 +434,4 @@ try {
                 visitor: true,
             })
     });
-} catch (error) {}
+} catch (error) { }

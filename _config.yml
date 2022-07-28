@@ -115,8 +115,7 @@ aomori_logo_typed_animated: true
 aomori_menu:
   Home: /
   Archives: /archives
-  Friends: /friends
-  Photography: /photography
+  Music: /music
 
 # 侧边栏菜单
 aomori_widgets:
@@ -163,8 +162,8 @@ aomori_baidu_sitepush: true
 #comment
 aomori_valine:
   enable: true
-  appId: 'QveONKJXoGOXEGdNb3e0iJpU-MdYXbMMI'
-  appKey: 'GojSrg0lF1RWya5pBJ4qBozc'
+  appId: 'YxzXQwNe3AulCfVPAum45S6T-gzGzoHsz'
+  appKey: 'cuKhuVs45xUM7PeKxjeR4M6Y'
   
 
 # aomori_gitalk:

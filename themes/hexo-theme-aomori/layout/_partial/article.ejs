@@ -4,98 +4,77 @@
     <div class="article-inner">
 
         <% if (!post.video){ %>
-          <%- partial('post/gallery') %>
-        <% } %>
-        
-        <% if (post.video && post.layout !== 'tweet'){ %>
-          <div class="article-video">
-            <video class="article-video-plyr" data-poster="<%= post.video.poster %>">
-              <source src="<%= post.video.src %>">
-            </video>
-          </div>
-        <% } %>
+            <%- partial('post/gallery') %>
+                <% } %>
 
-        <% if ((post.link || post.title) && post.layout !== 'tweet'){ %>
-        <header class="article-header">
-            <%- partial('post/title', {class_name: 'article-title'}) %>
-        </header>
-        <% } %>
+                    <% if (post.video && post.layout !=='tweet' ){ %>
+                        <div class="article-video">
+                            <video class="article-video-plyr" data-poster="<%= post.video.poster %>">
+                                <source src="<%= post.video.src %>">
+                            </video>
+                        </div>
+                        <% } %>
 
-        <div class="article-more-info article-more-info-<%= post.layout %> hairline">
+                            <% if ((post.link || post.title) && post.layout !=='tweet' ){ %>
+                                <header class="article-header">
+                                    <%- partial('post/title', {class_name: 'article-title' }) %>
+                                </header>
+                                <% } %>
 
-            <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
+                                    <div class="article-more-info article-more-info-<%= post.layout %> hairline">
 
-            <% if (post.categories && post.categories.length){ %>
-            <div class="article-category">
-                <%- list_categories(post.categories, {
-                    show_count: false,
-                    class: 'article-category',
-                    style: 'none',
-                    separator: ',',
-                    depth: 1
-                }) %>
-            </div>
-            <% } %>
+                                        <%- partial('post/date', {class_name: 'article-date' , date_format: null}) %>
 
-            <% if (post.tags && post.tags.length){ %>
-            <div class="article-tag">
-                <%- list_tags(post.tags, {
-                    show_count: false,
-                    class: 'article-tag',
-                    amount: 3
-                }) %>
-            </div>
-            <% } %>
+                                            <% if (post.categories && post.categories.length){ %>
+                                                <div class="article-category">
+                                                    <%- list_categories(post.categories, { show_count: false,
+                                                        class: 'article-category' , style: 'none' , separator: ',' ,
+                                                        depth: 1 }) %>
+                                                </div>
+                                                <% } %>
 
-            <% if (config.aomori_busuanzi){ %>
-            <div class="article-busuanzi">
-                👁有 <span id="busuanzi_value_page_pv">N</span> 人看过
-            </div>
-            <% } %>
-        </div>
+                                                    <% if (post.tags && post.tags.length){ %>
+                                                        <div class="article-tag">
+                                                            <%- list_tags(post.tags, { show_count: false,
+                                                                class: 'article-tag' , amount: 3 }) %>
+                                                        </div>
+                                                        <% } %>
 
-        <div class="article-entry post-inner-html hairline" itemprop="articleBody">
-            <%- post.content %>
-        </div>
+                                                            <% if (config.aomori_busuanzi){ %>
+                                                                <div class="article-busuanzi">
+                                                                    👁有 <span id="busuanzi_value_page_pv">N</span> 人看过
+                                                                </div>
+                                                                <% } %>
+                                    </div>
+
+                                    <div class="article-entry post-inner-html hairline" itemprop="articleBody">
+                                        <%- post.content %>
+                                    </div>
 
     </div>
 
-    <% if (post.layout !== 'tweet') { %>
+    <% if (post.layout !=='tweet' ) { %>
 
-    <%- partial('post/reprint') %>
+        <%- partial('post/reprint') %>
 
-    <%- partial('post/refer') %>
+            <%- partial('post/refer') %>
 
-    <%- partial('post/copyright') %>
+                <%- partial('post/copyright') %>
 
-    <% } %>
+                    <% } %>
 
-    <%- partial('post/nav') %>
-
-    <section class="share">
-        <!-- <div class="share-title"><%= __('share') %></div> -->
-        <a class="share-item" target="_blank"
-            href="https://twitter.com/share?text=<%- post.title %> - <%- config.title %>&url=<%- post.permalink %>">
-            <box-icon type='logo' name='twitter'></box-icon>
-        </a>
-        <a class="share-item" target="_blank"
-            href="https://www.facebook.com/sharer.php?title=<%- post.title %> - <%- config.title %>&u=<%- post.permalink %>">
-            <box-icon name='facebook-square' type='logo' ></box-icon>
-        </a>
-        <!-- <a class="share-item" target="_blank"
-            href="https://service.weibo.com/share/share.php?title=<%- post.title %> - <%- config.title %>&url=<%- post.permalink %>&pic=">
-            <div class="n-icon n-icon-weibo"></div>
-        </a> -->
-        <a class="share-item" target="_blank"
-            href="/music">
-            <box-icon type='solid' name='music'></box-icon>
-        </a>
-    </section>
+                        <%- partial('post/nav') %>
+                            <section class="share">
+                                <a class="share-item"
+                                    onclick="showMusic()" style="z-index: 1000;">
+                                    <box-icon name='music'></box-icon>
+                                </a>
+                            </section>
 
 </article>
 
 <%- partial('post/comments') %>
 
-<% if (config.aomori_busuanzi){ %>
-<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<% } %>
+    <% if (config.aomori_busuanzi){ %>
+        <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <% } %>
