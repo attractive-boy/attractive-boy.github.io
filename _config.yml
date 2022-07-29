@@ -161,7 +161,7 @@ aomori_baidu_sitepush: true
 
 #comment
 aomori_valine:
-  enable: true
+  enable: false
   appId: 'YxzXQwNe3AulCfVPAum45S6T-gzGzoHsz'
   appKey: 'cuKhuVs45xUM7PeKxjeR4M6Y'
   
@@ -203,3 +203,4 @@ algolia:
 aomori_search_algolia: true
 
 rss: /atom.xml
+

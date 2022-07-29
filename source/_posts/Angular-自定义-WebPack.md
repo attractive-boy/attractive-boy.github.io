@@ -1,11 +1,14 @@
 ---
 title: Angular 自定义 WebPack
 date: 2022-07-28 22:02:33
-tags: - angular
+tags: 
+    - angular
     - webpack
 ---
 
 ### Angular Cli 6 以后禁用了 webpack 的自定义配置，官方似乎并未提供自定义配置 Webpack 的方法。
+
+<!-- more -->
 
 ### 要自定义 Webpack 需要引入第三方库（以 Angular 13 为例）
 

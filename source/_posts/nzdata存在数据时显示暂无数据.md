@@ -2,8 +2,8 @@
 title: nzdata存在数据时显示暂无数据
 date: 2022-06-20 21:29:59
 tags: 
-    -- angular
-    -- nztable
+    - angular
+    - nztable
 ---
 
 在nztable中设置nzdata时，当我往nzdata数组中添加数据之后，会发现这样的情况：
