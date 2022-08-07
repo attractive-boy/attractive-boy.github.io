@@ -115,7 +115,6 @@ aomori_logo_typed_animated: true
 aomori_menu:
   Home: /
   Archives: /archives
-  Music: /music
 
 # 侧边栏菜单
 aomori_widgets:
@@ -126,7 +125,7 @@ aomori_widgets:
   - archive #文章归档
 
 # 知识共享使用许可
-aomori_copyright: true # or false
+aomori_copyright: false # or false
 
 # 社交媒体
 aomori_social:
