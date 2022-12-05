@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    
+    <title>焦点轮播图 | IDGI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    
+
+    
+
+    
+    <link rel="alternate" href="/atom.xml" title="IDGI" type="application/atom+xml">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+<link rel="stylesheet" href="/dist/build.css?v=1628496545463.css">
+
+
+    <script>
+        window.isPost = true
+        window.aomori = {
+            
+            
+            valine: {
+                enable: false,
+                appId: "YxzXQwNe3AulCfVPAum45S6T-gzGzoHsz",
+                appKey: "cuKhuVs45xUM7PeKxjeR4M6Y",
+            },
+            
+            
+        }
+        window.aomori_logo_typed_animated = true
+        window.aomori_search_algolia = false
+
+    </script>
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+<link rel="icon" href="/ico/PacMan.ico">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+<!-- <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script> -->
+<body>
+
+    <div class="container">
+    <header class="header">
+        <div class="header-type">
+            
+            <div class="header-type-avatar avatar avatar-sm">
+                <img src="/ico/Mario.ico" alt="attractiveboy">
+            </div>
+            
+            <div class="header-type-inner">
+                
+                    <div id="typed-strings" style="display:none">
+                        <p>IDGI</p>
+                    </div>
+                    <a class="header-type-title" id="typed" href="/"></a>
+                
+    
+                
+            </div>
+        </div>
+        <div class="header-menu">
+            <div class="header-menu-inner">
+                
+                    <a href="/">Home</a>
+                
+            </div>
+            <div class="header-menu-social">
+                
+    <a class="social" target="_blank" href="https://github.com/attractive-boy">
+        <box-icon type='logo' name='github'></box-icon>
+    </a>
+
+    <a class="social" target="_blank" href="">
+        <box-icon type='' name=''></box-icon>
+    </a>
+
+            </div>
+        </div>
+
+        <div class="header-menu-mobile">
+            <div class="header-menu-mobile-inner" id="mobile-menu-open">
+                <i class="icon icon-menu"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="header-menu-mobile-menu">
+        <div class="header-menu-mobile-menu-bg"></div>
+        <div class="header-menu-mobile-menu-wrap">
+            <div class="header-menu-mobile-menu-inner">
+                <div class="header-menu-mobile-menu-close" id="mobile-menu-close">
+                    <i class="icon icon-cross"></i>
+                </div>
+                <div class="header-menu-mobile-menu-list">
+                    
+                    <a href="/">Home</a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+    <div class="container">
+        <div class="main">
+            <section class="inner">
+                <section class="inner-main">
+                    <div class="post">
+    <article id="post-clbatjtv00005pk4iglw8cmzo" class="article article-type-post" itemscope
+    itemprop="blogPost">
+
+    <div class="article-inner">
+
+        
+            
+                
+
+                    
+
+                            
+                                <header class="article-header">
+                                    
+  
+    <h1 class="article-title" itemprop="name">
+      焦点轮播图
+    </h1>
+  
+
+                                </header>
+                                
+
+                                    <div class="article-more-info article-more-info-post hairline">
+
+                                        <div class="article-date">
+  <time datetime="2021-08-21T15:25:37.000Z" itemprop="datePublished">2021-08-21</time>
+</div>
+
+                                            
+
+                                                    
+                                                        <div class="article-tag">
+                                                            <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/" rel="tag">jQuery</a></li></ul>
+                                                        </div>
+                                                        
+
+                                                            
+                                    </div>
+
+                                    <div class="article-entry post-inner-html hairline" itemprop="articleBody">
+                                        <h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><blockquote>
+<p>本方法基于bootstrap，首先需要引入<a target="_blank" rel="noopener" href="https://github.com/twbs/bootstrap/releases/download/v4.6.0/bootstrap-4.6.0-dist.zip">bootstrap4</a>，然后在需要使用bootstrap样式和方法的元素用一个<code>&lt;div class=&quot;container&quot;&gt;&lt;/div&gt;</code>包裹起来。</p>
+</blockquote>
+<span id="more"></span>
+
+<h3 id="图片切换"><a href="#图片切换" class="headerlink" title="图片切换"></a>图片切换</h3><pre><code>&lt;div class=&quot;carousel&quot;&gt;
+    &lt;div class=&quot;carousel-inner&quot;&gt;
+        &lt;div class=&quot;carousel-item&quot;&gt;
+            &lt;img src=&quot;...&quot; alt=&quot;...&quot;&gt;
+        &lt;/div&gt;
+        ...
+    &lt;/div&gt;
+&lt;div&gt;
+</code></pre>
+<p> 其中</p>
+<ol>
+<li><code>carousel</code>的css样式为：</li>
+</ol>
+<pre><code>.carousel&#123;
+    position: relative;
+&#125;
+</code></pre>
+<p>作为整个轮播图的相对定位。</p>
+<ol start="2">
+<li><code>carousel-inner</code>的css样式为：</li>
+</ol>
+<pre><code>.carousel-inner &#123;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+&#125;
+</code></pre>
+<p><code>overflow</code>溢出隐藏，并且也做了相对定位，宽度为父元素的100%。</p>
+<ol start="3">
+<li><code>carousel-item</code>的css样式为：</li>
+</ol>
+<pre><code>.carousel-item &#123;
+  position: relative;
+  display: none;
+  float: left;
+  width: 100%;
+  margin-right: -100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: -webkit-transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
+&#125;
+</code></pre>
+<p><code>display: none</code>每张图片都进行了隐藏。</p>
+<blockquote>
+<p>要让图片显示，需要给首页<strong>第一张</strong>显示的图片设置<code>class=&quot;active&quot;</code>属性</p>
+</blockquote>
+<h4 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h4><p>给最外层的<code>&lt;div class=&quot;carousel&quot; &gt;&lt;/div&gt;</code>添加一个事件<code>data-ride=&quot;carousel&quot;</code>此时轮播图可以隔一段时间自己轮换照片。</p>
+<h3 id="左右箭头"><a href="#左右箭头" class="headerlink" title="左右箭头"></a>左右箭头</h3><pre><code>&lt;a href=&quot;&quot; class=&quot;carousel-control-next&quot;&gt;&lt;/a&gt;
+&lt;a href=&quot;&quot; class=&quot;carousel-control-prev&quot;&gt;&lt;/a&gt;
+</code></pre>
+<p><code>carousel-control-next</code>和<code>carousel-control-prev</code>的css代码为：</p>
+<pre><code>.carousel-control-prev,
+.carousel-control-next &#123;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 15%;
+  color: #fff;
+  text-align: center;
+  opacity: 0.5;
+  transition: opacity 0.15s ease;
+&#125;
+</code></pre>
+<p>绝对定位，位于轮播图的一左一右。</p>
+<p>此时我们还看不到任何效果，需要添加两个小箭头。</p>
+<pre><code>&lt;span class=&quot;carousel-control-next-icon&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;carousel-control-prev-icon&quot;&gt;&lt;/span&gt;
+</code></pre>
+<p>将这两个按钮添加到<code>&lt;a&gt;&lt;/a&gt;</code>中。</p>
+<p>此时这两个小箭头还没有任何作用，此时添加事件:</p>
+<pre><code>&lt;a data-slide=&quot;next&quot; href=&quot;#change&quot;...&gt;&lt;/a&gt;
+&lt;a data-slide=&quot;prev&quot; href=&quot;#change&quot;...&gt;&lt;/a&gt;
+</code></pre>
+<p>给最外层carousel添加一个<code>id = &quot;change&quot;</code>表示箭头改变的是他的图案。</p>
+<p>效果完成，点击箭头可实现图片转换。</p>
+<h3 id="轮播指示器"><a href="#轮播指示器" class="headerlink" title="轮播指示器"></a>轮播指示器</h3><p>轮播指示器采用列表。</p>
+<pre><code>&lt;ul class=&quot;carousel-indicators&quot;&gt;
+&lt;/ul&gt;
+</code></pre>
+<p><code>carousel</code>的css样式为：</p>
+<pre><code>.carousel-indicators &#123;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 15;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-left: 0;
+  margin-right: 15%;
+  margin-left: 15%;
+  list-style: none;
+&#125;
+</code></pre>
+<p>弹性，x轴主轴，主轴居中显示，绝对定位</p>
+<p>然后添加四个<code>&lt;li&gt;&lt;/li&gt;</code>,不需要写样式，由<code>carousel-indicators</code>直接控制。</p>
+<pre><code>.carousel-indicators li &#123;
+  box-sizing: content-box;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  width: 30px;
+  height: 3px;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #fff;
+  background-clip: padding-box;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  opacity: .5;
+  transition: opacity 0.6s ease;
+&#125;
+</code></pre>
+<h4 id="事件-1"><a href="#事件-1" class="headerlink" title="事件"></a>事件</h4><p>让每个<code>&lt;li&gt;</code> 可以被点击应该添加<code>data-slide-to=&quot;num&quot;</code>其中num是<code>&lt;li&gt;</code>的图片编号（0开始）同时添加一个属性<code>data-target=&quot;#change&quot;</code>表示点击之后改变的轮播图。</p>
+<blockquote>
+<p>要使当时被选中的指示器颜色改变需要给<strong>第一个</strong><code>&lt;li&gt;&lt;/li&gt;</code>添加<code>class=&quot;active&quot;</code></p>
+</blockquote>
+<p>至此轮播图<del>制作成功</del>，还需重写自己觉得不美观的css样式。</p>
+<h4 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a><a target="_blank" rel="noopener" href="https://index.attractiveboy.top/bootstrap/carousel.html">完整代码</a></h4>
+                                    </div>
+
+    </div>
+
+    
+
+        
+
+            
+
+                
+
+                    
+
+                        
+<nav class="article-nav">
+  
+    <a href="/2021/10/20/bilibili%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/" id="article-nav-newer" class="article-nav-link-wrap">
+      <div class="article-nav-caption">下一篇</div>
+      <div class="article-nav-title">
+        
+          bilibili视频下载
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+                            <section class="share">
+                            </section>
+
+</article>
+
+
+
+
+
+
+
+
+
+
+
+    
+</div>
+                </section>
+            </section>
+
+            
+            <aside class="sidebar ">
+                
+
+
+<div class="widget" id="widget">
+    
+      
+  <div class="widget-wrap">
+    <div class="widget-inner">
+      <div class="toc post-toc-html"></div>
+    </div>
+  </div>
+
+    
+      
+
+    
+      
+  <div class="widget-wrap widget-tags">
+    <div class="widget-title"><span>Tags</span></div>
+    <div class="widget-inner">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DOM/" rel="tag">DOM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/angular/" rel="tag">angular</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/" rel="tag">jQuery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nztable/" rel="tag">nztable</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/" rel="tag">webpack</a></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap widget-recent-posts">
+    <div class="widget-title"><span>Recent Posts</span></div>
+    <div class="widget-inner">
+      <ul>
+        
+          <li>
+            <a href="/2022/08/06/git-commit-%E6%8F%90%E4%BA%A4%E8%A7%84%E8%8C%83/">git commit 提交规范</a>
+          </li>
+        
+          <li>
+            <a href="/2022/07/28/Angular-%E8%87%AA%E5%AE%9A%E4%B9%89-WebPack/">Angular 自定义 WebPack</a>
+          </li>
+        
+          <li>
+            <a href="/2022/06/20/nzdata%E5%AD%98%E5%9C%A8%E6%95%B0%E6%8D%AE%E6%97%B6%E6%98%BE%E7%A4%BA%E6%9A%82%E6%97%A0%E6%95%B0%E6%8D%AE/">nzdata存在数据时显示暂无数据</a>
+          </li>
+        
+          <li>
+            <a href="/2021/10/20/bilibili%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/">bilibili视频下载</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/21/%E8%BD%AE%E6%92%AD%E5%9B%BE/">焦点轮播图</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+    
+</div>
+
+<div id="backtop"><i class="icon icon-arrow-up"></i></div>
+            </aside>
+            
+        </div>
+    </div>
+
+    <footer class="footer">
+    <div class="footer-wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#3c4859" fill-opacity="1"
+                d="M0,160L60,181.3C120,203,240,245,360,240C480,235,600,181,720,186.7C840,192,960,256,1080,261.3C1200,267,1320,213,1380,186.7L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
+            </path>
+        </svg>
+    </div>
+
+    <div class="footer-wrap">
+        <div class="footer-inner">
+            IDGI &copy;2022&nbsp;&nbsp;&nbsp;&nbsp;
+            <!-- 备案号 -->
+            湘ICP备2022024995号
+            <!-- <br> Powered By Hexo · Theme By 
+            <a href="https://github.com/lh1me/hexo-theme-aomori" target="_blank">Aomori</a> -->
+        </div>
+    </div>
+
+</footer>
+
+
+
+
+
+
+<script src="/dist/build.js?1628496545463.js"></script>
+
+
+<script src="/dist/custom.js?1628496545463.js"></script>
+
+
+
+<!-- 百度链接提交 -->
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+
+
+
+
+<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+<script type="text/javascript" src="/javascripts/fireworks.js"></script>
+<!--�������Ц����-->
+<script type="text/javascript" src="/javascripts/FunnyTitle.js"></script>
+<!--��̬��������-->
+<script type="text/javascript"
+color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+</body>
+</html>
